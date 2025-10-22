@@ -149,12 +149,36 @@ h3 {
     margin-left: -230px;
 }
 
-/* ===== FORCE DESKTOP LAYOUT ON MOBILE ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE DESKTOP LOOK FOR MOBILE ===== */
+@media (max-width: 1024px) {
     body {
-        width: 1280px; /* your desktop canvas width */
-        transform: scale(0.75); /* scale down to fit smaller screens */
+        width: 1280px; /* Base desktop canvas */
+        transform: scale(calc(100vw / 1280)); /* Automatically scale to screen width */
         transform-origin: top left;
         overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    html, body {
+        height: auto;
+    }
+
+    /* Optional: make text a bit more readable on small screens */
+    #hero-text, #intro-p, #qualification-page, #footer {
+        text-shadow: none;
+    }
+
+    #btn-email {
+        padding: 8px 0;
+        font-size: 14px;
     }
 }
+
+/* For very small screens (≤480px) */
+@media (max-width: 480px) {
+    body {
+        transform: scale(calc(100vw / 1280));
+        transform-origin: top left;
+    }
+}
+
