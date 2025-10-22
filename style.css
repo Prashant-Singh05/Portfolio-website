@@ -149,36 +149,29 @@ h3 {
     margin-left: -230px;
 }
 
-/* ===== RESPONSIVE DESKTOP LOOK FOR MOBILE ===== */
+/* ===== IMPROVED DESKTOP LAYOUT SCALING FOR MOBILE ===== */
 @media (max-width: 1024px) {
-    body {
-        width: 1280px; /* Base desktop canvas */
-        transform: scale(calc(100vw / 1280)); /* Automatically scale to screen width */
-        transform-origin: top left;
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
     html, body {
         height: auto;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #fefae0; /* fallback background */
     }
 
-    /* Optional: make text a bit more readable on small screens */
-    #hero-text, #intro-p, #qualification-page, #footer {
-        text-shadow: none;
-    }
-
-    #btn-email {
-        padding: 8px 0;
-        font-size: 14px;
+    body {
+        width: 1280px; /* your desktop canvas width */
+        transform: scale(calc(100vw / 1280)); /* scale perfectly to viewport */
+        transform-origin: top center; /* center it horizontally */
+        overflow-x: hidden;
     }
 }
 
-/* For very small screens (≤480px) */
+/* Even smaller devices (≤480px) */
 @media (max-width: 480px) {
     body {
         transform: scale(calc(100vw / 1280));
-        transform-origin: top left;
+        transform-origin: top center;
     }
 }
 
