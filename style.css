@@ -1,143 +1,139 @@
+/* Global Reset & Typography */
 body {
-    margin: 0px;
+    margin: 0;
     font-family: "Playwrite US Modern", cursive;
+    overflow-x: hidden;
 }
 
+/* HERO SECTION */
 #hero-section {
     display: flex;
+    flex-wrap: wrap;
     background-color: #fefae0;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-
 #avatar {
-    width: 52%;
-    height: 743px;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
     background-image: url("avatar.png");
-    background-color: #e7c8a0;
     background-size: cover;
+    background-position: center;
+    background-color: #e7c8a0;
+    border-radius: 10px;
 }
 
 #hero-text {
-    width: 10%;
-    font-size: 15px;
-    font-family: "Playwrite US Modern", cursive;
-    margin: 145px 0 0 50px ;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 30px;
+    color: black;
     text-shadow: 0 0 1px black;
 }
 
 #name {
-    font-size: 80px;
+    font-size: 60px;
     font-family: "Cinzel", serif;
-    line-height: 1;
-    
+    line-height: 1.1;
 }
 
 .sub-intro {
-    width: 250px;
-    margin-top: -40px;
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: -20px;
 }
 
 #btn-email {
-    width: 120px;
+    width: 140px;
     border: 1px solid black;
     background-color: #fefae0;
     color: black;
-    appearance: none;
     padding: 10px 0;
     font-family: inherit;
-    margin-top: 30px;
-    text-shadow: 0 0 .5px black;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
-
+/* INTRO SECTION */
 #intro {
-    width: auto;
-    height: 720px;
     background-color: #0d1b2a;
-    display: flex;
-    justify-content: space-around;
-    color: #778da9;
-    text-shadow: 0 0 1px black;
+    color: #e0e1dd;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 #intro-h1 {
-    margin:150px 0 0 30px;
-    font-size: 65px;
+    font-size: 45px;
     font-family: "Cinzel", serif;
+}
 
-}
 #intro-p {
-    margin:150px 0 0 90px;
-    color: #e0e1dd;
-    font-size: 35px;
-    max-width: 45%;
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* QUALIFICATIONS */
 #qualification-page {
     background-color: #598392;
-    margin: 0;
-    width: auto;
-    height: 720px;
-    padding-top: 50px;
-    text-shadow: 0 0 1px black;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#heading1 {
+    font-family: "Cinzel", serif;
+    font-size: 40px;
+    margin-bottom: 40px;
 }
 
 #qual-text {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    margin: 200px 0 ;
-    
+    gap: 50px;
 }
-#heading1 {
-    font-family: "Cinzel", serif;
-    margin: 60px 80px;
-    font-size: 40px;
+
+#style, #style2 {
+    max-width: 300px;
 }
-#style {
-    margin-top: -10px;
-    margin-left: -100px;
-}
-#style2 {
-    margin-right: 400px;
-    line-height: 1;
-}
+
 h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Cinzel", serif;
+    margin-bottom: 10px;
 }
 
-#edu-pic {
-    margin-left: -20px;
-    width: 100px;
-    height: 100px;
+#edu-pic, #skill-pic {
+    width: 80px;
+    height: 80px;
 }
 
-#skill-pic {
-    margin-left: -20px;
-    width: 100px;
-    height: 100px;
-}
-
+/* FOOTER */
 #footer {
-    width: auto;
-    height: 400px;
-    padding: 10px;
     background-color: #aec3b0;
-
     text-align: center;
+    padding: 60px 20px;
 }
 
 #footer-h1 {
-    margin-top: 100px;
     font-family: "Cinzel", serif;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 #footer-p {
-    margin-top: -20px;
-    margin-left: -90px;
-    
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#footer-link {
+    margin-top: 20px;
+    font-size: 18px;
 }
 
 #link {
@@ -145,6 +141,53 @@ h3 {
     color: inherit;
 }
 
-#footer-link {
-    margin-left: -230px;
+/* RESPONSIVE MEDIA QUERIES */
+@media (min-width: 768px) {
+    #hero-section {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    #avatar {
+        width: 45%;
+        height: 600px;
+    }
+
+    #hero-text {
+        width: 45%;
+        text-align: left;
+        margin-top: 100px;
+    }
+
+    #name {
+        font-size: 80px;
+    }
+
+    #intro {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+        padding: 100px 50px;
+    }
+
+    #intro-h1 {
+        font-size: 60px;
+    }
+
+    #intro-p {
+        font-size: 25px;
+        max-width: 45%;
+    }
+
+    #qual-text {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    #footer-h1 {
+        font-size: 50px;
+    }
 }
