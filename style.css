@@ -149,90 +149,12 @@ h3 {
     margin-left: -230px;
 }
 
-/* ===== RESPONSIVE SCALE WITHOUT LAYOUT CHANGE ===== */
+/* ===== FORCE DESKTOP LAYOUT ON MOBILE ===== */
 @media (max-width: 768px) {
-    html {
-        font-size: 85%; /* scale everything down proportionally */
-    }
-
     body {
+        width: 1280px; /* your desktop canvas width */
+        transform: scale(0.75); /* scale down to fit smaller screens */
+        transform-origin: top left;
         overflow-x: hidden;
-    }
-
-    #hero-section {
-        flex-wrap: wrap;
-    }
-
-    #avatar {
-        width: 100%;
-        height: auto;
-        min-height: 400px;
-        background-position: center;
-    }
-
-    #hero-text {
-        width: 90%;
-        margin: 60px auto;
-        text-align: center;
-    }
-
-    #name {
-        font-size: 60px;
-    }
-
-    .sub-intro {
-        font-size: 14px;
-    }
-
-    #btn-email {
-        font-size: 14px;
-        padding: 8px 0;
-    }
-
-    #intro {
-        height: auto;
-        flex-wrap: wrap;
-        padding: 60px 20px;
-    }
-
-    #intro-h1 {
-        font-size: 50px;
-        text-align: center;
-    }
-
-    #intro-p {
-        font-size: 22px;
-        text-align: center;
-        margin: 20px auto;
-        max-width: 90%;
-    }
-
-    #qualification-page {
-        height: auto;
-        padding: 50px 20px;
-    }
-
-    #qual-text {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
-    #style, #style2 {
-        margin: 30px;
-    }
-
-    #footer {
-        height: auto;
-        padding: 40px 20px;
-    }
-
-    #footer-h1 {
-        font-size: 40px;
-    }
-
-    #footer-p, #footer-link {
-        margin: 10px 0;
-        text-align: center;
     }
 }
